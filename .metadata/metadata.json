@@ -1,0 +1,10 @@
+﻿{
+	"name":	"Compagna Communis Ianuensis",
+	"id":	"unlomtrois.compagna_communis",
+	"version":	"0.1",
+	"supported_game_version":	"1.1",
+	"short_description":	"This mod focuses on Genoa Republic and adds a new International Organization called \"Compagna Communis Ianuensis\", which includes Genoa, Gazaria office, San Giorgio bank, maonas, etc. It also makes Gazaria an unlanded tag",
+	"tags":	["Historical"],
+	"relationships":	[],
+	"game_custom_data":	{}
+}

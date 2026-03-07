@@ -1,0 +1,22 @@
+international_organization_manager = {
+	#################################################################
+	# 				Unique International Organizations				#
+	#################################################################
+
+	# Compagna Communis Ianuensis
+	add_international_organization = {
+		type = compagna_communis
+		creation_date = 1099.1.1
+
+		map_color = rgb { 218 215 56 }
+
+		members = { GEN GAZ }
+		leader = GEN
+		cc_core_member = { GEN }
+		cc_trade_office = {	GAZ }
+
+		variables = { 
+			communal_unity = 30
+		}
+	}
+}
