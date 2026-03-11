@@ -1,0 +1,4 @@
+﻿l_english:
+  maona: "Maona"
+  maona_desc: "A $maona$ is a chartered [subject|e] unique to countries with the [ShowAdvanceName('maona_advance')] [advance|e], representing a consortium of private investors granted administration over a territory in exchange for a large upfront payment to their [overlord|e]. Unlike a regular [ShowSubjectTypeName('vassal')], a $maona$ pays no periodic [gold|e], but transfers the bulk of its [merchant_power|e] to the overlord. A $maona$ cannot be [annexed|e] through normal means; instead, when its charter expires, the overlord must choose to buy it back, extend the charter at the cost of [prestige|e] and [estate|e] [loyalty|e], or sell it to a [ShowSubjectTypeName('state_bank')]. The overlord gets increased [ShowModifierTypeName('trade_efficiency')] and [ShowModifierTypeName('global_merchant_capacity_modifier')]."
+  

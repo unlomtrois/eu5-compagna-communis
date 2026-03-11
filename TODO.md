@@ -16,8 +16,10 @@
 # plan
 
 ## add "maona" subject type
-- add "Maona" subject_type (doc, script, loc)
-- add government reform (doc, script, loc, icon)
+- [x] add "Maona" subject_type (script, loc)
+- [x] add maona advance (script, loc, icon)
+- [x] add maona government reform (script, loc)
+- [x] add maona country rank (script, loc, icon)
 - make events for creating a maona
 - it should populate members of the Compagna Communis IO.
 

@@ -1,0 +1,11 @@
+﻿country_flavor = {
+	type = country
+	
+	text = {
+	    localization_key = rank_maona
+		trigger = {
+		    is_subject = yes
+			has_reform = government_reform:maona_charter
+		}
+	}
+}
