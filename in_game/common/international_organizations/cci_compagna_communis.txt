@@ -165,12 +165,12 @@ compagna_communis_io = {
 				scope:defender = { is_member_of_international_organization = scope:recipient }
 			}
 			# Only allowed during Guelph-Ghibelline crisis (low communal unity)
-			custom_tooltip = {
-				text = compagna_internal_war_blocked_tt
-				scope:recipient = {
-					var:communal_unity < 20
-				}
-			}
+#			custom_tooltip = {
+#				text = compagna_internal_war_blocked_tt
+#				scope:recipient = {
+#					var:communal_unity < 20
+#				}
+#			}
 		}
 		trigger_else = {
 			always = yes

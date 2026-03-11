@@ -34,8 +34,9 @@
 	has_limited_diplomacy = yes
 
 	allow_declaring_wars = {
+		always = no
 		# Maone can wage small wars to protect their trade interests
-		maona_can_declare_wars_trigger = yes #todo
+		# maona_can_declare_wars_trigger = yes #todo
 	}
 
 	fleet_basing_rights = yes
@@ -85,7 +86,8 @@
 	}
 
 	visible_through_diplomacy = {
-		has_advance = maona_advance
+		tag = GEN
+		# has_advance = maona_advance
 		#scope:target = {
 		#	has_country_flag = is_genoese_maona
 		#	subject_type_is_not_locked = yes

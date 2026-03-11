@@ -1,6 +1,5 @@
-﻿country_flavor = {
-	type = country
-	
+﻿INJECT:country_flavor = {
+    # type = country
 	text = {
 	    localization_key = rank_maona
 		trigger = {
