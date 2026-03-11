@@ -5,7 +5,7 @@ international_organization_manager = {
 
 	# Compagna Communis Ianuensis
 	add_international_organization = {
-		type = compagna_communis
+		type = compagna_communis_io
 		creation_date = 1099.1.1
 
 		map_color = rgb { 218 215 56 }

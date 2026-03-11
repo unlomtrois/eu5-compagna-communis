@@ -3,7 +3,7 @@
 # Represents the communal trade federation that bound Genoa's territories,
 # trade offices, maone, and the Bank of St. George into a single political entity.
 
-compagna_communis = {
+compagna_communis_io = {
 
 	has_target = no
 	unique = yes
