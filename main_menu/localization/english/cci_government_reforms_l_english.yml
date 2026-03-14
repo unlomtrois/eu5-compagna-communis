@@ -1,0 +1,3 @@
+﻿l_english:
+  maona_charter: "Maona Charter"
+  maona_charter_desc: "This territory is administered by a consortium of private investors who financed its conquest or lease on behalf of [GetCountry('GEN').GetName]. The shareholders are entitled to a share of the revenues deriving from the local trade, while the bulk of the territory's [merchant_power|e] flows back to the Compagna Communis. The charter binds the Maona for a fixed term, after which [GetCountry('GEN').GetName] may choose to redeem it — or extend the arrangement at the cost of its prestige."

@@ -1,0 +1,4 @@
+﻿
+io_opinion_compagna_communis_io = {
+	value = 10
+}
