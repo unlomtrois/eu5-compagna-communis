@@ -1,11 +1,11 @@
 ﻿# SPECIAL STATUSES (international_organization_special_statuses/):
 #
-#   cc_core_member:
+#   cci_superba:
 #     - Full voting rights, can propose resolutions
 #     - Parliament power: high
 #     - Only City of Genoa at start
 #
-#   cc_trade_office:
+#   cci_ghazaria:
 #     - Full voting rights, can propose resolutions
 #     - Enables special trade buildings in assigned sea region
 #     - Gazaria (Black Sea) at start; Western Office (Atlantic) unlockable via law
@@ -28,7 +28,7 @@
 #     - Transfers trade influence to Genoa, no monthly tax
 #     - Funded by estate wealth pool (one-time lump sum to Genoa)
 
-cc_core_member = {
+cci_superba = {
 	priority = 10
     max_countries = 1
     leader = yes
@@ -56,7 +56,7 @@ cc_core_member = {
 	map_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR
 }
 
-cc_trade_office = {
+cci_ghazaria = {
     priority = 5
     
     modifier = {

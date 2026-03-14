@@ -3,7 +3,7 @@
 # Represents the communal trade federation that bound Genoa's territories,
 # trade offices, maone, and the Bank of St. George into a single political entity.
 
-compagna_communis_io = {
+compagna_communis_ianuensis = {
 
 	has_target = no
 	unique = yes
@@ -88,7 +88,7 @@ compagna_communis_io = {
 		# Only core members can lead — not Maone
 		OR = {
 			has_special_status_in_international_organization = {
-				type = special_status:cc_core_member
+				type = special_status:cci_superba
 				international_organization = scope:recipient
 			}
 			has_special_status_in_international_organization = {
@@ -96,7 +96,7 @@ compagna_communis_io = {
 				international_organization = scope:recipient
 			}
 			has_special_status_in_international_organization = {
-				type = special_status:cc_trade_office
+				type = special_status:cci_ghazaria
 				international_organization = scope:recipient
 			}
 		}
@@ -112,8 +112,8 @@ compagna_communis_io = {
 	# Maona         = Semi-autonomous trade concessions (junior members)
 
 	special_statuses_implemented = {
-		cc_core_member      # Genoa itself — seat of the Compagna
-		cc_trade_office     # Gazaria, potential Western Office
+		cci_superba      # Genoa itself — seat of the Compagna
+		cci_ghazaria     # Gazaria, potential Western Office
 		cc_state_bank       # Bank of St. George
 		cc_maona            # Maona of Chios, Corsica, Sardinia, etc.
 	}
@@ -131,11 +131,11 @@ compagna_communis_io = {
 		scope:actor ?= {
 			OR = {
 				has_special_status_in_international_organization = {
-					type = special_status:cc_core_member
+					type = special_status:cci_superba
 					international_organization = root
 				}
 				has_special_status_in_international_organization = {
-					type = special_status:cc_trade_office
+					type = special_status:cci_ghazaria
 					international_organization = root
 				}
 			}
@@ -187,7 +187,7 @@ compagna_communis_io = {
 #		OR = {
 #			is_leader_of_international_organization = scope:recipient
 #			has_special_status_in_international_organization = {
-#				type = special_status:cc_core_member
+#				type = special_status:cci_superba
 #				international_organization = scope:recipient
 #			}
 #			has_special_status_in_international_organization = {
@@ -195,7 +195,7 @@ compagna_communis_io = {
 #				international_organization = scope:recipient
 #			}
 #			has_special_status_in_international_organization = {
-#				type = special_status:cc_trade_office
+#				type = special_status:cci_ghazaria
 #				international_organization = scope:recipient
 #			}
 #		}
@@ -251,7 +251,7 @@ compagna_communis_io = {
 #		# Core members cannot leave
 #		NOT = {
 #			has_special_status_in_international_organization = {
-#				type = special_status:cc_core_member
+#				type = special_status:cci_superba
 #				international_organization = scope:recipient
 #			}
 #		}
@@ -509,7 +509,7 @@ compagna_communis_io = {
 #						limit = {
 #							root = {
 #								country_has_special_status = {
-#									type = special_status:cc_trade_office
+#									type = special_status:cci_ghazaria
 #									country = prev
 #								}
 #							}
@@ -647,7 +647,7 @@ compagna_communis_io = {
 #	on_creation = {
 #		add_country_to_international_organization = scope:actor
 #		international_organization_add_special_status = {
-#			type = special_status:cc_core_member
+#			type = special_status:cci_superba
 #			country = scope:actor
 #		}
 #	}
@@ -658,7 +658,8 @@ compagna_communis_io = {
 	on_left = {
 	}
 	
-	monthly_effect = { # todo
+	monthly_effect = { 
+	    # todo
 	}
 
 #	monthly_effect = {
@@ -703,7 +704,7 @@ compagna_communis_io = {
 #					NOT = { has_variable = eastern_crisis_fired }
 #					any_international_organization_member = {
 #						has_special_status_in_international_organization = {
-#							type = special_status:cc_trade_office
+#							type = special_status:cci_ghazaria
 #							international_organization = root
 #						}
 #						has_country_flag = is_gazaria
@@ -798,12 +799,12 @@ compagna_communis_io = {
 #
 # SPECIAL STATUSES (international_organization_special_statuses/):
 #
-#   cc_core_member:
+#   cci_superba:
 #     - Full voting rights, can propose resolutions
 #     - Parliament power: high
 #     - Only City of Genoa at start
 #
-#   cc_trade_office:
+#   cci_ghazaria:
 #     - Full voting rights, can propose resolutions
 #     - Enables special trade buildings in assigned sea region
 #     - Gazaria (Black Sea) at start; Western Office (Atlantic) unlockable via law

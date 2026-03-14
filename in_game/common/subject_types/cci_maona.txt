@@ -81,7 +81,7 @@
 	}
 
 	creation_visible = {
-		has_advance = maona_advance		
+		has_advance = maona_advance
 		# always = no  # Created through Compagna parliament, not diplomacy
 	}
 
@@ -102,6 +102,13 @@
 		# Set charter duration flag — used by monthly tick to check expiry
 		# Actual duration (20-50 years) set by the parliament resolution that creates the Maona
     	add_reform = government_reform:maona_charter
+        international_organization:compagna_communis_ianuensis = {
+			add_country_to_international_organization = root
+			international_organization_add_special_status = {
+    			type = special_status:cc_maona
+    			country = root
+    		}
+		}
 	}
 
 	on_disable = {
