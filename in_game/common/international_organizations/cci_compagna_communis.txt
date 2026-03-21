@@ -15,9 +15,9 @@ compagna_communis_ianuensis = {
 		always = yes
 	}
 
-	has_parliament = no #yes
-	# parliament_type = compagna_parliament # Custom parliament type — votes on expeditions, laws, Maona charters
-	# resolution_widget = parliament
+	has_parliament = yes
+	parliament_type = cci_compagna_consilium # Custom parliament type — votes on expeditions, laws, Maona charters
+	resolution_widget = parliament
 	has_dynastic_power = no # Genoa is a republic, no dynastic mechanics
 
 	# ─────────────────────────────────────────────

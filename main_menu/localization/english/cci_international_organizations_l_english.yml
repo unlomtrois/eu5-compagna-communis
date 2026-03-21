@@ -23,3 +23,11 @@
  TRADE_PROSPERITY: "Trade Prosperity"
  LEAD_maona: "$LIST$ is a [SUBJECT_TYPE.GetName]"
  AM_maona: "[SUBJECT_TYPE.GetName] of $LIST$."
+ 
+ # high_kingship_leader_title: "Lol"
+ cci_leader_title: "Compagna Communis"
+ # high_kingship_leader_desc
+ cci_leader_desc: "Test"
+ 
+ cci_compagna_consilium: "Compagna Consilium"
+ cci_compagna_consilium_desc: "The governing assembly of the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetName], where the affairs of the Compagna are deliberated and its laws enacted. Originally convened in the Cathedral of San Lorenzo, the Consilium is the forum through which the members of the Compagna shape the direction of [GetCountry('GEN').GetAdjective] commerce and expansion overseas. Which members may participate and vote is determined by the laws of the Compagna."

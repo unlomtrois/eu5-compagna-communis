@@ -1,0 +1,30 @@
+#example = {
+#	positive = "gfx/interface/icons/modifier_types/example_positive.dds" # Will be used if >= 0 or if `negative` isn't set
+#	negative = "gfx/interface/icons/modifier_types/example_negative.dds" # Will be used if < 0 (optional)
+#	default = yes # The first one in the file with this flag will be used as default
+#}
+
+cci_superba_can_participate_in_parliament = {
+	positive = "gfx/interface/icons/modifier_types/member_can_participate_in_parliament.dds" 
+}
+cci_superba_agenda_impact = {
+	positive = "gfx/interface/icons/modifier_types/elector_agenda_impact.dds" 
+}
+cci_ghazaria_can_participate_in_parliament = {
+	positive = "gfx/interface/icons/modifier_types/elector_can_participate_in_parliament.dds"
+}
+cci_ghazaria_agenda_impact = {
+	positive = "gfx/interface/icons/modifier_types/elector_agenda_impact.dds" 
+}
+cci_state_bank_can_participate_in_parliament = {
+	positive = "gfx/interface/icons/modifier_types/free_city_can_participate_in_parliament.dds"
+}
+cci_state_bank_agenda_impact = {
+	positive = "gfx/interface/icons/modifier_types/free_city_agenda_impact.dds" 
+}
+cci_maona_can_participate_in_parliament = {
+	positive = "gfx/interface/icons/modifier_types/elector_can_participate_in_parliament.dds"
+}
+cci_maona_agenda_impact = {
+	positive = "gfx/interface/icons/modifier_types/elector_agenda_impact.dds" 
+}
