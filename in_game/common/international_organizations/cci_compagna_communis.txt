@@ -136,11 +136,11 @@ compagna_communis_ianuensis = {
 
 	gives_military_access_to_all_when_at_war = yes
 
-	fleet_basing_rights = {
-		# All Compagna members share fleet basing rights
-		scope:actor = { is_member_of_international_organization = root }
-		scope:recipient = { is_member_of_international_organization = root }
-	}
+#	fleet_basing_rights = {
+#		# All Compagna members share fleet basing rights
+#		scope:actor = { is_member_of_international_organization = root }
+#		scope:recipient = { is_member_of_international_organization = root }
+#	}
 
 	can_declare_war = {
 		trigger_if = {

@@ -1,0 +1,7 @@
+organization_geodiplomatic_theme = {
+	blockoverride "organization_overview_tab_visible" {}
+	
+	blockoverride "organization_members_tab_visible" {
+		visible = no
+	}
+}

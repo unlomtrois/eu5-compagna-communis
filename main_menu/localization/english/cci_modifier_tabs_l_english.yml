@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
   MODIFIER_TYPE_NAME_cci_superba_can_participate_in_parliament: "$cci_superba$ can participate in parliament"
   MODIFIER_TYPE_DESC_cci_superba_can_participate_in_parliament: "This allows the [ShowSpecialStatusName('cci_superba')] to suggest [parliament_agendas|e] in the [parliament|e] of an [international_organization|e]."
   MODIFIER_TYPE_NAME_cci_superba_agenda_impact: "Agenda Impact for $cci_superba$"

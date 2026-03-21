@@ -1,4 +1,4 @@
-cci_compagna_consilium = {
+﻿cci_compagna_consilium = {
 	type = international_organization
 	potential = {
 		international_organization_type = international_organization_type:compagna_communis_ianuensis
