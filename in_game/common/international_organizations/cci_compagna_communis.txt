@@ -4,7 +4,6 @@
 # trade offices, maone, and the Bank of St. George into a single political entity.
 
 compagna_communis_ianuensis = {
-
 	has_target = no
 	unique = yes
 	expel_members_who_are_targets_of_other_members = no
@@ -29,7 +28,7 @@ compagna_communis_ianuensis = {
 	# could theoretically eclipse Genoa through trade dominance or debt leverage.
 
 	has_leader_country = yes
-	leader_title_key = "COMPAGNA_LEADER" # loc: "Captain of the Compagna" / "Capitano della Compagna"
+	leader_title_key = "COMPAGNA_LEADER"
 	leader_type = country
 	use_regnal_number = no
 
@@ -41,18 +40,10 @@ compagna_communis_ianuensis = {
 
 	override_ruler_title = no # The Doge title remains primary
 
-#	leader = {
-#		# The member with the highest compagna_influence_score leads
-#		ordered_international_organization_member = {
-#			order_by = "compagna_influence_score(root)"
-#			max = 1
-#			check_range_bounds = no
-#			add_to_list = leaders
-#		}
-#	}
-
 	# Score to determine leadership — trade power, prestige, treasury all matter
 	leader_score = {
+	    value = great_power_score
+		
 	    # The City of Genoa gets a baseline bonus — it's the historical seat
 		if = {
 			limit = { this = c:GEN }
@@ -64,14 +55,13 @@ compagna_communis_ianuensis = {
 		add = {
 			desc = "TRADE_POWER"
 			value = monthly_trade_income
-			# multiply = 2
 		}
 		
 #		# Bank of St. George gets bonus from holding Maone as clients
 #		if = {
 #			limit = {
 #				has_special_status_in_international_organization = {
-#					type = special_status:cc_state_bank
+#					type = special_status:cci_state_bank
 #					international_organization = scope:recipient
 #				}
 #			}
@@ -92,11 +82,11 @@ compagna_communis_ianuensis = {
 				international_organization = scope:recipient
 			}
 			has_special_status_in_international_organization = {
-				type = special_status:cc_state_bank
+				type = special_status:cci_ghazaria
 				international_organization = scope:recipient
 			}
 			has_special_status_in_international_organization = {
-				type = special_status:cci_ghazaria
+				type = special_status:cci_state_bank
 				international_organization = scope:recipient
 			}
 		}
@@ -106,16 +96,11 @@ compagna_communis_ianuensis = {
 	# SPECIAL STATUSES
 	# ─────────────────────────────────────────────
 	# Defines the hierarchy within the Compagna.
-	# Core Member   = City of Genoa (primary), can hold multiple votes
-	# Trade Office  = Gazaria, Western Office (extraterritorial trade entities)
-	# State Bank    = Bank of St. George (financial arm)
-	# Maona         = Semi-autonomous trade concessions (junior members)
-
 	special_statuses_implemented = {
 		cci_superba      # Genoa itself — seat of the Compagna
 		cci_ghazaria     # Gazaria, potential Western Office
-		cc_state_bank       # Bank of St. George
-		cc_maona            # Maona of Chios, Corsica, Sardinia, etc.
+		cci_state_bank   # Bank of St. George
+		cci_maona        # Maona of Chios, Corsica, Sardinia, etc.
 	}
 
 	# ─────────────────────────────────────────────
@@ -158,19 +143,13 @@ compagna_communis_ianuensis = {
 	}
 
 	can_declare_war = {
-		# Members cannot attack each other unless the Compagna is in crisis
 		trigger_if = {
 			limit = {
+				scope:attacker = { is_ai = yes }
 				scope:attacker = { is_member_of_international_organization = scope:recipient }
 				scope:defender = { is_member_of_international_organization = scope:recipient }
 			}
-			# Only allowed during Guelph-Ghibelline crisis (low communal unity)
-#			custom_tooltip = {
-#				text = compagna_internal_war_blocked_tt
-#				scope:recipient = {
-#					var:communal_unity < 20
-#				}
-#			}
+			scope:attacker = { has_casus_belli_on = scope:defender }
 		}
 		trigger_else = {
 			always = yes
@@ -191,7 +170,7 @@ compagna_communis_ianuensis = {
 #				international_organization = scope:recipient
 #			}
 #			has_special_status_in_international_organization = {
-#				type = special_status:cc_state_bank
+#				type = special_status:cci_state_bank
 #				international_organization = scope:recipient
 #			}
 #			has_special_status_in_international_organization = {
@@ -259,7 +238,7 @@ compagna_communis_ianuensis = {
 #		trigger_if = {
 #			limit = {
 #				has_special_status_in_international_organization = {
-#					type = special_status:cc_maona
+#					type = special_status:cci_maona
 #					international_organization = scope:recipient
 #				}
 #			}
@@ -275,7 +254,7 @@ compagna_communis_ianuensis = {
 #		trigger_if = {
 #			limit = {
 #				has_special_status_in_international_organization = {
-#					type = special_status:cc_maona
+#					type = special_status:cci_maona
 #					international_organization = scope:recipient
 #				}
 #			}
@@ -311,17 +290,16 @@ compagna_communis_ianuensis = {
 #				divide = 100
 #			}
 #		}
-#		trade_efficiency = 0.10
-#		naval_morale = 0.05
 	}
 
 	# Leader gets extra diplomatic and trade bonuses
 	leader_modifier = {
+	    great_power_score_exempt_from_forfeit = 25 # same as high_kingship
+		
 		diplomatic_capacity = 1
 		max_diplomats = 1
 		trade_efficiency = 0.10
-		monthly_prestige = 0.05
-		naval_morale = 0.05
+		monthly_prestige = 0.2
 
 		allowed_alliance = yes
 		allowed_guarantee = yes
@@ -335,7 +313,7 @@ compagna_communis_ianuensis = {
 
 	international_organization_modifier = {
 		# Base configuration for the Compagna
-		compagna_max_maone = 6  # Maximum number of active Maone at once
+		# compagna_max_maone = 6  # Maximum number of active Maone at once
 	}
 
 	# ─────────────────────────────────────────────
@@ -374,9 +352,6 @@ compagna_communis_ianuensis = {
 						}
 						value = 0.05
 					}
-					else = {
-						value = 0
-					}
 				}
 
 				# Trade prosperity — rich Genoa is united Genoa
@@ -391,9 +366,6 @@ compagna_communis_ianuensis = {
 						}
 						value = 0.03
 					}
-					else = {
-						value = 0
-					}
 				}
 
 				# Few members = easier to manage
@@ -403,26 +375,20 @@ compagna_communis_ianuensis = {
 						limit = { total_members <= 4 }
 						value = 0.02
 					}
-					else = {
-						value = 0
-					}
 				}
 
 				# ── NEGATIVE FACTORS ──
 
 				# Guelph-Ghibelline conflict active
-#				subtract = {
-#					desc = "GUELPH_GHIBELLINE_CONFLICT"
-#					if = {
-#						limit = {
-#							has_global_variable = guelphs_and_ghibellines_active
-#						}
-#						value = 0.15
-#					}
-#					else = {
-#						value = 0
-#					}
-#				}
+				subtract = {
+					desc = "guelphs_and_ghibellines"
+					if = {
+						limit = {
+							is_situation_active = situation:guelphs_and_ghibellines
+						}
+						value = 0.10
+					}
+				}
 
 				# Too many Maone — overextension breeds resentment
 #				subtract = {
@@ -432,7 +398,7 @@ compagna_communis_ianuensis = {
 #						limit = {
 #							root = {
 #								country_has_special_status = {
-#									type = special_status:cc_maona
+#									type = special_status:cci_maona
 #									country = prev
 #								}
 #							}
@@ -463,7 +429,7 @@ compagna_communis_ianuensis = {
 #						limit = {
 #							any_international_organization_member = {
 #								has_special_status_in_international_organization = {
-#									type = special_status:cc_state_bank
+#									type = special_status:cci_state_bank
 #									international_organization = root
 #								}
 #								# Bank's score exceeds Genoa's
@@ -526,7 +492,7 @@ compagna_communis_ianuensis = {
 #						limit = {
 #							root = {
 #								country_has_special_status = {
-#									type = special_status:cc_maona
+#									type = special_status:cci_maona
 #									country = prev
 #								}
 #							}
@@ -542,7 +508,7 @@ compagna_communis_ianuensis = {
 #						limit = {
 #							any_international_organization_member = {
 #								has_special_status_in_international_organization = {
-#									type = special_status:cc_state_bank
+#									type = special_status:cci_state_bank
 #									international_organization = root
 #								}
 #							}
@@ -591,7 +557,7 @@ compagna_communis_ianuensis = {
 	# ─────────────────────────────────────────────
 
 #	payments_implemented = {
-#		cc_maona_trade_transfer   # Maone send trade revenue to the Compagna
+#		cci_maona_trade_transfer   # Maone send trade revenue to the Compagna
 #		cc_member_contribution    # Core members pay maintenance
 #	}
 
@@ -605,7 +571,6 @@ compagna_communis_ianuensis = {
 	no_cb_price_modifier_for_fellow_member = 2
 
 	opinion_bonus = 15
-#	opinion_trust = 10
 
 	# ─────────────────────────────────────────────
 	# BANK ANNEXATION OF MAONE
@@ -622,12 +587,12 @@ compagna_communis_ianuensis = {
 	can_annex_members = {
 	    always = no
 #		has_special_status_in_international_organization = {
-#			type = special_status:cc_state_bank
+#			type = special_status:cci_state_bank
 #			international_organization = scope:recipient
 #		}
 #		scope:target ?= {
 #			has_special_status_in_international_organization = {
-#				type = special_status:cc_maona
+#				type = special_status:cci_maona
 #				international_organization = scope:recipient
 #			}
 #		}
@@ -635,7 +600,7 @@ compagna_communis_ianuensis = {
 
 #	can_annex_visible = {
 #		has_special_status_in_international_organization = {
-#			type = special_status:cc_state_bank
+#			type = special_status:cci_state_bank
 #			international_organization = scope:recipient
 #		}
 #	}
@@ -643,14 +608,6 @@ compagna_communis_ianuensis = {
 	# ─────────────────────────────────────────────
 	# LIFECYCLE EFFECTS
 	# ─────────────────────────────────────────────
-
-#	on_creation = {
-#		add_country_to_international_organization = scope:actor
-#		international_organization_add_special_status = {
-#			type = special_status:cci_superba
-#			country = scope:actor
-#		}
-#	}
 
 	on_joined = {
 	}
@@ -668,7 +625,7 @@ compagna_communis_ianuensis = {
 #			every_international_organization_member = {
 #				limit = {
 #					has_special_status_in_international_organization = {
-#						type = special_status:cc_maona
+#						type = special_status:cci_maona
 #						international_organization = root
 #					}
 #					has_country_flag = maona_charter_expiring_soon
@@ -810,13 +767,13 @@ compagna_communis_ianuensis = {
 #     - Gazaria (Black Sea) at start; Western Office (Atlantic) unlockable via law
 #     - Extraterritorial — no land, only buildings
 #
-#   cc_state_bank:
+#   cci_state_bank:
 #     - Full voting rights, can propose resolutions
 #     - Can absorb (annex) Maone, turning them into "client" subjects
 #     - Created via parliament resolution when debt >= 5000 or bankrupt
 #     - Player can switch to play as the Bank
 #
-#   cc_maona:
+#   cci_maona:
 #     - Junior voting rights in parliament
 #     - Created via "Organize Expedition" parliament resolution
 #     - Has charter timer (20-50 years)
@@ -837,7 +794,7 @@ compagna_communis_ianuensis = {
 #
 # LAWS (international_organization_laws/):
 #   - cc_trade_focus:           Mediterranean / Black Sea / Atlantic / Global
-#   - cc_maona_rights:          Restricted / Standard / Expanded
+#   - cci_maona_rights:          Restricted / Standard / Expanded
 #   - cc_bank_authority:        Limited / Standard / Expanded / Tax Collection Rights
 #   - cc_expedition_policy:     Defensive only / Opportunistic / Aggressive
 #   - cc_internal_governance:   Oligarchic / Balanced / Popular

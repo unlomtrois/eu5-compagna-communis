@@ -105,7 +105,7 @@
         international_organization:compagna_communis_ianuensis = {
 			add_country_to_international_organization = root
 			international_organization_add_special_status = {
-    			type = special_status:cc_maona
+    			type = special_status:cci_maona
     			country = root
     		}
 		}

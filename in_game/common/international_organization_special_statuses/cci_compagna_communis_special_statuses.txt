@@ -11,13 +11,13 @@
 #     - Gazaria (Black Sea) at start; Western Office (Atlantic) unlockable via law
 #     - Extraterritorial — no land, only buildings
 #
-#   cc_state_bank:
+#   cci_state_bank:
 #     - Full voting rights, can propose resolutions
 #     - Can absorb (annex) Maone, turning them into "client" subjects
 #     - Created via parliament resolution when debt >= 5000 or bankrupt
 #     - Player can switch to play as the Bank
 #
-#   cc_maona:
+#   cci_maona:
 #     - Junior voting rights in parliament
 #     - Created via "Organize Expedition" parliament resolution
 #     - Has charter timer (20-50 years)
@@ -81,7 +81,7 @@ cci_ghazaria = {
     map_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_TIER2_COLOR
 }
 
-cc_state_bank = {
+cci_state_bank = {
     priority = 4
     
     modifier = {
@@ -106,7 +106,7 @@ cc_state_bank = {
     map_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_TIER2_COLOR
 }
 
-cc_maona = {
+cci_maona = {
     priority = 3
     
     modifier = {

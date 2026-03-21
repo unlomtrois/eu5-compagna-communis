@@ -8,10 +8,10 @@
  cci_superba_desc: "The seat of the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetName] and heart of [GetCountry('GEN').GetAdjective] power. As the founding [member|e], the Superba holds full voting rights in the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetParliament.GetName], can propose [policies|e], and receives a baseline bonus to its influence within the organization. The Compagna endures only as long as the Superba stands."
  cci_ghazaria: "Officium Gazariae"
  cci_ghazaria_desc: "The Officium Gazariae oversees [GetCountry('GEN').GetAdjective] commercial interests across the [ShowAreaName('black_sea_area')], operating from the great fortress of Caffa in [ShowAreaName('crimea_area')]. Countries along the [ShowAreaName('black_sea_area')] coast will find [GetCountry('GEN').GetAdjective] merchants a persistent presence in their ports."
- cc_state_bank: "Banco di San Giorgio"
- cc_state_bank_desc: "Born from the crushing weight of [GetCountry('GEN').GetName]'s accumulated debts, the Banco di San Giorgio consolidates the republic's obligations under a single institution empowered to manage public finances. The Bank may purchase expired [ShowSubjectTypeName('maona_charter')]s, turning them into its own clients — and should its influence within the Compagna surpass that of the [ShowSpecialStatusName('cci_superba')] itself, it may rise to lead the organization from the shadows."
- cc_maona: "Maona"
- cc_maona_desc: "A chartered consortium of private investors granted administration over a territory for a fixed term. A Maona transfers the bulk of its [merchant_power|e] to [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetLeaderTitle], while its shareholders collect a share of local trade revenues. When the charter expires, the [ShowSpecialStatusName('cci_superba')] must choose: redeem the territory, extend the charter at a cost to [prestige|e] and [estate_satisfaction|e], or sell it to the [ShowSpecialStatusName('cc_state_bank')]."
+ cci_state_bank: "Banco di San Giorgio"
+ cci_state_bank_desc: "Born from the crushing weight of [GetCountry('GEN').GetName]'s accumulated debts, the Banco di San Giorgio consolidates the republic's obligations under a single institution empowered to manage public finances. The Bank may purchase expired [ShowSubjectTypeName('maona')]s, turning them into its own clients — and should its influence within the Compagna surpass that of the [ShowSpecialStatusName('cci_superba')] itself, it may rise to lead the organization from the shadows."
+ cci_maona: "Maona"
+ cci_maona_desc: "A chartered consortium of private investors granted administration over a territory for a fixed term. A Maona transfers the bulk of its [merchant_power|e] to [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetLeaderTitle], while its shareholders collect a share of local trade revenues. When the charter expires, the [ShowSpecialStatusName('cci_superba')] must choose: redeem the territory, extend the charter at a cost to [prestige|e] and [estate_satisfaction|e], or sell it to the [ShowSpecialStatusName('cci_state_bank')]."
  COMPAGNA_LEADER: "Primatus Compagnae"
  SEAT_OF_THE_COMPAGNA: "Seat of Compagna"
  
@@ -19,6 +19,7 @@
  communal_unity_desc: "It is a measure of the internal cohesion of the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetName], reflecting how well its members cooperate under shared governance.\n\nHigh $communal_unity$ affects the following things:\n$BULLET$ Increases [ShowModifierTypeName('trade_efficiency')] and [ShowModifierTypeName('naval_morale')] for all [members|e] of the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetName].\n$BULLET$ [members|e] are more likely to vote for [policies|e] proposed by the leader in the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetParliament.GetName].\n\nLow $communal_unity$ affects the following things:\n$BULLET$ Reduces [ShowModifierTypeName('trade_efficiency')] for the [GetUniqueInternationalOrganization('compagna_communis_ianuensis').GetName].\n$BULLET$ [members|e] may declare war on each other if $communal_unity$ falls below $ICON_NUMBER_20$.\n$BULLET$ The [GetUniqueInternationalOrganization('compagna_communis').GetName] risks dissolution if $communal_unity$ falls below $ICON_NUMBER_10$."
  COMMUNAL_UNITY_DISPLAY: "$VAL$"
  COMPACT_ORGANIZATION: "Compact Organization"
- 
+ STABLE_LEADERSHIP: "Stable Leadership"
+ TRADE_PROSPERITY: "Trade Prosperity"
  LEAD_maona: "$LIST$ is a [SUBJECT_TYPE.GetName]"
  AM_maona: "[SUBJECT_TYPE.GetName] of $LIST$."
