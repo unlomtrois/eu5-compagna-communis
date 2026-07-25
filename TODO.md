@@ -1,4 +1,4 @@
-# backlog 
+# backlog
 
 - add parliament for Compagna Communis IO
 - give Genoa 1 free naval governor through Compagna leadership
